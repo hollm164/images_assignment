@@ -19,7 +19,7 @@ function preload(){
 
 	brain = loadImage("images/brain-wrinkles.jpg");
 	seed = loadImage("images/seed.png");
-	flower = loadImage("images/pink flower.gif");
+	flower = loadImage("images/pinkflower.gif");
 
 }
 
@@ -41,7 +41,9 @@ function draw() {
 
 	//STEP 5:
 	//draw your images with image(imagevariable);
+	tint(245,169,208);
 	background(brain);
+
 
 	//STEP 7:
 	//You're also going to need an if statement here to check
@@ -49,10 +51,12 @@ function draw() {
 	//(see image upload example version 2)
 	if(mouseIsPressed){
 		imageMode(CENTER);
-		image(flower,mouseX,mouseY, flower.width, flower.height);
+		noTint();
+		image(flower,mouseX,mouseY,flower.width/2, flower.height/2);
 	} else {
 		imageMode(CENTER);
-		image(seed,mouseX,mouseY, seed.width. seed.height);
+		noTint();
+		image(seed, mouseX,mouseY,seed.width/6, seed.height/6);
 	}
 
 }
